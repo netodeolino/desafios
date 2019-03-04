@@ -1,5 +1,15 @@
 const assert = require('assert')
-const { menor, maior, somaMaiorMenor, copiar, soma, existe } = require('./arrays')
+const {
+  menor, 
+  maior,
+  somaMaiorMenor,
+  copiar,
+  soma,
+  existe,
+  numRepeticao,
+  saoIguais,
+  elemComum
+} = require('./arrays.respostas')
 
 describe('menor()', () => {
   it('Deve retornar o menor valor do array [1]', async () => {
@@ -103,5 +113,68 @@ describe('existe()', () => {
     const elem = 4
     const array = [1, 2, 3, 4, 5, 6, 7]
     assert.equal(existe(array, elem), true)
+  })
+})
+
+describe('numRepeticao()', () => {
+  it('Deve retornar a quantidade de repetições do elem no array [1]', async () => {
+    const elem = 1
+    const array = [7, 3, 6, 2, 9, 1]
+    assert.notEqual(numRepeticao(array, elem), 2)
+  })
+
+  it('Deve retornar a quantidade de repetições do elem no array [2]', async () => {
+    const elem = 3
+    const array = [3, 2, 3, 5, 6, 3]
+    assert.equal(numRepeticao(array, elem), 3)
+  })
+
+  it('Deve retornar a quantidade de repetições do elem no array [3]', async () => {
+    const elem = 4
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.equal(numRepeticao(array, elem), 1)
+  })
+})
+
+describe('saoIguais()', () => {
+  it('Deve retornar se dois arrays são iguais [1]', async () => {
+    const array1 = [7, 3, 6, 2, 9, 1]
+    const array2 = [7, 3, 6, 2, 9, 1, 4]
+    assert.equal(saoIguais(array1, array2), false)
+  })
+
+  it('Deve retornar se dois arrays são iguais [2]', async () => {
+    const array1 = [3, 2, 3, 5, 6, 3]
+    const array2 = [3, 2, 3, 5, 6, 3]
+    assert.equal(saoIguais(array1, array2), true)
+  })
+
+  it('Deve retornar se dois arrays são iguais [3]', async () => {
+    const array1 = [1, 2, 3, 4, 5, 6, 7]
+    const array2 = [1, 2, 3, 4, 5, 6, 7]
+    assert.notEqual(saoIguais(array1, array2), false)
+  })
+})
+
+describe('elemComum()', () => {
+  it('Deve retornar se elem existe em array1 e array2 [1]', async () => {
+    const elem = 1
+    const array1 = [7, 3, 6, 2, 9, 1]
+    const array2 = [7, 3, 6, 4, 8, 1, 4]
+    assert.notEqual(elemComum(array1, array2, elem), false)
+  })
+
+  it('Deve retornar se elem existe em array1 e array2 [2]', async () => {
+    const elem = 3
+    const array1 = [3, 2, 3, 5, 6, 3]
+    const array2 = [4, 3, 2, 6, 5, 7]
+    assert.equal(elemComum(array1, array2, elem), true)
+  })
+
+  it('Deve retornar se elem existe em array1 e array2 [3]', async () => {
+    const elem = 7
+    const array1 = [1, 3, 2, 9, 5, 6, 7]
+    const array2 = [1, 2, 3, 8, 5, 7, 6]
+    assert.equal(elemComum(array1, array2, elem), true)
   })
 })

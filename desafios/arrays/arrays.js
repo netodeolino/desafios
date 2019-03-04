@@ -41,14 +41,24 @@ function existe(array, elem) {
   return false
 }
 
+/*
+  Implemente uma função que retorna quantas vezes um elemento se repete no array.
+*/
 function numRepeticao(array, elem) {
   return 0
 }
 
+/*
+  Implemente uma função que retorna true se dois arrays são iguais.
+  Caso contrário, retorne false.
+*/
 function saoIguais(array1, array2) {
   return false
 }
 
+/*
+  Implemente uma função que retorna se um elem existe em dois arrays distintos.
+*/
 function elemComum(array1, array2, elem) {
   return false
 }
@@ -98,5 +108,13 @@ function somaArray(array1, array2) {
 }
 
 module.exports = {
-  menor, maior, somaMaiorMenor, copiar, soma, existe
+  menor,
+  maior,
+  somaMaiorMenor,
+  copiar,
+  soma,
+  existe,
+  numRepeticao,
+  saoIguais,
+  elemComum
 }

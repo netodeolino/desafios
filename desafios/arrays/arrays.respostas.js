@@ -68,15 +68,48 @@ function existe(array, elem) {
   return false
 }
 
+/*
+  Implemente uma função que retorna quantas vezes um elemento se repete no array.
+*/
 function numRepeticao(array, elem) {
-  return 0
+  let cont = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == elem) {
+      cont++
+    }
+  }
+  return cont
 }
 
+/*
+  Implemente uma função que retorna true se dois arrays são iguais.
+  Caso contrário, retorne false.
+*/
 function saoIguais(array1, array2) {
-  return false
+  if (array1.length != array2.length) {
+    return false
+  }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] != array2[i]) {
+      return false
+    }
+  }
+  return true
 }
 
+/*
+  Implemente uma função que retorna se um elem existe em dois arrays distintos.
+*/
 function elemComum(array1, array2, elem) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] == elem) {
+      for (let z = 0; z < array2.length; z++) {
+        if (array2[z] == elem) {
+          return true
+        }
+      }
+    }
+  }
   return false
 }
 
@@ -125,5 +158,5 @@ function somaArray(array1, array2) {
 }
 
 module.exports = {
-  menor, maior, somaMaiorMenor, copiar, soma, existe
+  menor, maior, somaMaiorMenor, copiar, soma, existe, numRepeticao, saoIguais, elemComum
 }
