@@ -8,7 +8,8 @@ const {
   existe,
   numRepeticao,
   saoIguais,
-  elemComum
+  elemComum,
+  estaContido
 } = require('./arrays.respostas')
 
 describe('menor()', () => {
@@ -176,5 +177,25 @@ describe('elemComum()', () => {
     const array1 = [1, 3, 2, 9, 5, 6, 7]
     const array2 = [1, 2, 3, 8, 5, 7, 6]
     assert.equal(elemComum(array1, array2, elem), true)
+  })
+})
+
+describe('estaContido()', () => {
+  it('Deve retornar se elem existe em array1 e array2 [1]', async () => {
+    const array1 = 'Esta'
+    const array2 = 'Esta contido'
+    assert.equal(estaContido(array1, array2), true)
+  })
+
+  it('Deve retornar se elem existe em array1 e array2 [2]', async () => {
+    const array1 = 'asd'
+    const array2 = 'dsaasddsa'
+    assert.equal(estaContido(array1, array2), true)
+  })
+
+  it('Deve retornar se elem existe em array1 e array2 [3]', async () => {
+    const array1 = 'calabaca'
+    const array2 = 'cabalaca'
+    assert.notEqual(estaContido(array1, array2), true)
   })
 })

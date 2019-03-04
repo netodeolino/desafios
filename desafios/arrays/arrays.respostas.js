@@ -113,8 +113,30 @@ function elemComum(array1, array2, elem) {
   return false
 }
 
+/*
+  Implemente uma função que retorna se array2 está contido em array1.
+*/
 function estaContido(array1, array2) {
-  return false
+  let achou = false
+  for (let i = 0; i < array2.length; i++) {
+    let cont = 0
+    while (cont + i < array2.length) {
+      if (array2[cont + i] != array1[cont]) {
+        achou = false
+        break
+      } else {
+        cont++
+        if (cont == array1.length) {
+          achou = true
+          break
+        }
+      }
+    }
+    if (achou == true) {
+      break
+    }
+  }
+  return achou
 }
 
 function swapElem(array, posicao1, posicao2) {
@@ -158,5 +180,14 @@ function somaArray(array1, array2) {
 }
 
 module.exports = {
-  menor, maior, somaMaiorMenor, copiar, soma, existe, numRepeticao, saoIguais, elemComum
+  menor,
+  maior,
+  somaMaiorMenor,
+  copiar,
+  soma,
+  existe,
+  numRepeticao,
+  saoIguais,
+  elemComum,
+  estaContido
 }

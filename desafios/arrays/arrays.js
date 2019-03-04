@@ -63,6 +63,9 @@ function elemComum(array1, array2, elem) {
   return false
 }
 
+/*
+  Implemente uma função que retorna se array1 está contido em array2.
+*/
 function estaContido(array1, array2) {
   return false
 }
@@ -116,5 +119,6 @@ module.exports = {
   existe,
   numRepeticao,
   saoIguais,
-  elemComum
+  elemComum,
+  estaContido
 }

@@ -7,4 +7,4 @@ Desafios para prática nos fundamentos/lógica de programação
 
 ### Algoritmos em JavaScript
 
-### Para executar os teste execute: npm run test
+### Para executar os testes: `npm run test`
