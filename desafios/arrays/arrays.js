@@ -70,42 +70,76 @@ function estaContido(array1, array2) {
   return false
 }
 
+/*
+  Implemente uma função que inverte os valores da posicao1 com a posicao2 do array.
+*/
 function swapElem(array, posicao1, posicao2) {
   return null
 }
 
+/*
+  Implemente uma função que inverte os valores do array1 com o array2.
+  Obs.: O retorno deve ser no padrão: return { novoArray1: array1, novoArray2: array2 }
+*/
 function swapArray(array1, array2) {
   return null
 }
 
+/*
+  Implemente uma função que inverte o array na ordem contrária.
+*/
 function inverte(array) {
   return null
 }
 
+/*
+  Implemente uma função que retorna a media aritimética dos valores no array.
+*/
 function media(array) {
   return 0
 }
 
+/*
+  Implemente uma função que verifica se um array está ordenado.
+*/
 function isOrdenado(array) {
   return false
 }
 
+/*
+  Implemente uma função que insere um elem no fim do array.
+*/
 function inserirNoFim(array, elem) {
   return null
 }
 
+/*
+  Implemente uma função que faz o swap da ultima posição com valor da posicao
+  e apaga o último elemento do array.
+*/
 function removerComSwap(array, posicao) {
   return null
 }
 
+/*
+  Implemente uma função que transforma um array em um número inteiro e retorna
+  esse valor. Ex.: [1, 2, 3, 4] = 1234
+*/
 function arrayParaInt(array) {
   return 0
 }
 
+/*
+  Implemente uma função que remove valores repetidos do array.
+*/
 function removeRepetidos(array) {
   return null
 }
 
+/*
+  Implemente uma função que soma os valores do array1 e array2 e adiciona um novo array.
+  Ex.: array1 = [10, 5, 30]. array2 = [5, 5, 15]. novo array = [15, 20, 45].
+*/
 function somaArray(array1, array2) {
   return null
 }
@@ -120,5 +154,15 @@ module.exports = {
   numRepeticao,
   saoIguais,
   elemComum,
-  estaContido
+  estaContido,
+  swapElem,
+  swapArray,
+  inverte,
+  media,
+  isOrdenado,
+  inserirNoFim,
+  removerComSwap,
+  arrayParaInt,
+  removeRepetidos,
+  somaArray
 }

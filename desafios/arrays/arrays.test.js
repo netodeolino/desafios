@@ -9,8 +9,18 @@ const {
   numRepeticao,
   saoIguais,
   elemComum,
-  estaContido
-} = require('./arrays.respostas')
+  estaContido,
+  swapElem,
+  swapArray,
+  inverte,
+  media,
+  isOrdenado,
+  inserirNoFim,
+  removerComSwap,
+  arrayParaInt,
+  removeRepetidos,
+  somaArray
+} = require('./arrays')
 
 describe('menor()', () => {
   it('Deve retornar o menor valor do array [1]', async () => {
@@ -197,5 +207,189 @@ describe('estaContido()', () => {
     const array1 = 'calabaca'
     const array2 = 'cabalaca'
     assert.notEqual(estaContido(array1, array2), true)
+  })
+})
+
+describe('swapElem()', () => {
+  it('Deve retornar novo array com swap das posicoes [1]', async () => {
+    const array = [1, 2, 3, 4, 5]
+    assert.deepEqual(swapElem(array, 0, 4), [5, 2, 3, 4, 1])
+  })
+
+  it('Deve retornar novo array com swap das posicoes [2]', async () => {
+    const array = [1, 2, 3, 4, 5]
+    assert.deepEqual(swapElem(array, 1, 3), [1, 4, 3, 2, 5])
+  })
+
+  it('Deve retornar novo array com swap das posicoes [3]', async () => {
+    const array = [1, 2, 3, 4, 5]
+    assert.deepEqual(swapElem(array, 1, 1), [1, 2, 3, 4, 5])
+  })
+})
+
+describe('swapArray()', () => {
+  it('Deve inverter arrays entre si [1]', async () => {
+    const array1 = [3, 2, 3, 5, 6, 3]
+    const array2 = [4, 3, 2, 6, 5, 7]
+    
+    swapArray(array1, array2)
+
+    assert.deepEqual(array1, [4, 3, 2, 6, 5, 7])
+    assert.deepEqual(array2, [3, 2, 3, 5, 6, 3])
+  })
+
+  it('Deve inverter arrays entre si [2]', async () => {
+    const array1 = [3, 2, 1]
+    const array2 = [1, 2, 3]
+    
+    swapArray(array1, array2)
+
+    assert.deepEqual(array1, [1, 2, 3])
+    assert.deepEqual(array2, [3, 2, 1])
+  })
+})
+
+describe('inverte()', () => {
+  it('Deve inverter a ordem do array [1]', async () => {
+    const array = [7, 3, 6, 2, 9]
+    inverte(array)
+    assert.deepEqual(array, [9, 2, 6, 3, 7])
+  })
+
+  it('Deve inverter a ordem do array [2]', async () => {
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    inverte(array)
+    assert.notDeepEqual(array, [1, 2, 3, 4, 5, 6, 8])
+  })
+
+  it('Deve inverter a ordem do array [3]', async () => {
+    const array = [3, 6, 3, 8, 4, 5, 7, 9]
+    inverte(array)
+    assert.deepEqual(array, [9, 7, 5, 4, 8, 3, 6, 3])
+  })
+})
+
+describe('media()', () => {
+  it('Deve retornar a média aritmética dos valores do array [1]', async () => {
+    const array = [7, 3, 6, 2, 9]
+    assert.equal(media(array), 5.4)
+  })
+
+  it('Deve retornar a média aritmética dos valores do array [2]', async () => {
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.notEqual(media(array), 4.1)
+  })
+
+  it('Deve retornar a média aritmética dos valores do array [3]', async () => {
+    const array = [3, 6, 3, 8, 4, 5, 7, 9]
+    assert.equal(media(array), 5.625)
+  })
+})
+
+describe('isOrdenado()', () => {
+  it('Deve retornar se o array é ordenado de forma crescente [1]', async () => {
+    const array = [7, 3, 6, 2, 9]
+    assert.equal(isOrdenado(array), false)
+  })
+
+  it('Deve retornar se o array é ordenado de forma crescente [2]', async () => {
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.equal(isOrdenado(array), true)
+  })
+
+  it('Deve retornar se o array é ordenado de forma crescente [3]', async () => {
+    const array = [3, 6, 3, 8, 4, 5, 7, 9]
+    assert.notEqual(isOrdenado(array), true)
+  })
+})
+
+describe('inserirNoFim()', () => {
+  it('Deve retornar o array com elem inserido no fim [1]', async () => {
+    const array = [7, 3, 6, 2, 9]
+    assert.deepEqual(inserirNoFim(array, 22), [7, 3, 6, 2, 9, 22])
+  })
+
+  it('Deve retornar o array com elem inserido no fim [2]', async () => {
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.deepEqual(inserirNoFim(array, 20), [1, 2, 3, 4, 5, 6, 7, 20])
+  })
+
+  it('Deve retornar o array com elem inserido no fim [3]', async () => {
+    const array = [3, 6, 3, 8, 4, 5, 7, 9]
+    assert.notDeepEqual(inserirNoFim(array, 9), [3, 6, 3, 8, 4, 5, 7, 9])
+  })
+})
+
+describe('removerComSwap()', () => {
+  it('Deve remover na posicao e fazer swap com valor da ultima posicao [1]', async () => {
+    const posicao = 1
+    const array = [7, 3, 6, 2, 9]
+    assert.deepEqual(removerComSwap(array, posicao), [7, 9, 6, 2])
+  })
+
+  it('Deve remover na posicao e fazer swap com valor da ultima posicao [2]', async () => {
+    const posicao = 0
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.deepEqual(removerComSwap(array, posicao), [7, 2, 3, 4, 5, 6])
+  })
+
+  it('Deve remover na posicao e fazer swap com valor da ultima posicao [3]', async () => {
+    const posicao = 0
+    const array = [1, 2, 3, 4, 5, 6, 7]
+    assert.notDeepEqual(removerComSwap(array, posicao), [1, 2, 3, 4, 5, 6])
+  })
+})
+
+describe('arrayParaInt()', () => {
+  it('Deve retornar um inteiro a partir dos valores do array [1]', async () => {
+    const array = [7, 3, 6, 2, 9]
+    assert.equal(arrayParaInt(array), 73629)
+  })
+
+  it('Deve retornar um inteiro a partir dos valores do array [2]', async () => {
+    const array = [1, 2, 3, 4, 5]
+    assert.equal(arrayParaInt(array), 12345)
+  })
+
+  it('Deve retornar um inteiro a partir dos valores do array [3]', async () => {
+    const array = [1, 2, 3, 4, 5]
+    assert.notEqual(arrayParaInt(array), 123456)
+  })
+})
+
+describe('removeRepetidos()', () => {
+  it('Deve remover valores repetidos do array [1]', async () => {
+    const array = [2, 2, 2, 3, 4, 3, 5]
+    assert.deepEqual(removeRepetidos(array), [2, 3, 4, 5])
+  })
+
+  it('Deve remover valores repetidos do array [2]', async () => {
+    const array = [1, 2, 3, 4, 5, 2]
+    assert.deepEqual(removeRepetidos(array), [1, 3, 4, 5, 2])
+  })
+
+  it('Deve remover valores repetidos do array [3]', async () => {
+    const array = [1, 2, 3, 4, 5, 2]
+    assert.notDeepEqual(removeRepetidos(array), [1, 2, 3, 4, 5, 2])
+  })
+})
+
+describe('somaArray()', () => {
+  it('Deve somar os valores de dois arrays e colocar em um novo [1]', async () => {
+    const array1 = [3, 2, 3]
+    const array2 = [4, 3, 2]
+    assert.deepEqual(somaArray(array1, array2), [7, 5, 5])
+  })
+
+  it('Deve somar os valores de dois arrays e colocar em um novo [2]', async () => {
+    const array1 = [3, 3, 3, 5]
+    const array2 = [4, 4, 2, 6]
+    assert.deepEqual(somaArray(array1, array2), [7, 7, 5, 11])
+  })
+
+  it('Deve somar os valores de dois arrays e colocar em um novo [3]', async () => {
+    const array1 = [3, 2, 3, 5]
+    const array2 = [4, 3, 2, 6]
+    assert.notDeepEqual(somaArray(array1, array2), [7, 6, 5, 11])
   })
 })

@@ -139,44 +139,123 @@ function estaContido(array1, array2) {
   return achou
 }
 
+/*
+  Implemente uma função que inverte os valores da posicao1 com a posicao2 do array.
+*/
 function swapElem(array, posicao1, posicao2) {
-  return null
+  let aux = array[posicao1]
+  array[posicao1] = array[posicao2]
+  array[posicao2] = aux
+  return array
 }
 
+/*
+  Implemente uma função que inverte os valores do array1 com o array2.
+  Obs.: O retorno deve ser no padrão: return { novoArray1: array1, novoArray2: array2 }
+*/
 function swapArray(array1, array2) {
-  return null
+  let aux = 0
+  for (let i = 0; i < array1.length; i++) {
+    aux = array1[i]
+    array1[i] = array2[i]
+    array2[i] = aux
+  }
 }
 
+/*
+  Implemente uma função que inverte o array na ordem contrária.
+*/
 function inverte(array) {
-  return null
+  let aux = null
+  for (let i = 0; i < array.length/2; i++) {
+    aux = array[i]
+    array[i] = array[array.length-i-1]
+    array[array.length-i-1] = aux
+  }
 }
 
+/*
+  Implemente uma função que retorna a media aritimética dos valores no array.
+*/
 function media(array) {
-  return 0
+  let soma = 0
+  for (let i = 0; i < array.length; i++) {
+    soma += array[i];
+  }
+  return soma/array.length
 }
 
+/*
+  Implemente uma função que verifica se um array está ordenado.
+*/
 function isOrdenado(array) {
-  return false
+  if (array.length == 1) {
+    return true
+  }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > array[i+1]) {
+      return false
+    }
+  }
+  return true
 }
 
+/*
+  Implemente uma função que insere um elem no fim do array.
+*/
 function inserirNoFim(array, elem) {
-  return null
+  array.push(elem)
+  return array
 }
 
+/*
+  Implemente uma função que faz o swap da ultima posição com valor da posicao
+  e apaga o último elemento do array.
+*/
 function removerComSwap(array, posicao) {
-  return null
+  if (posicao == -1) {
+    return array
+  }
+  array[posicao] = array[array.length-1]
+  array.pop()
+  return array
 }
 
+/*
+  Implemente uma função que transforma um array em um número inteiro e retorna
+  esse valor. Ex.: [1, 2, 3, 4] = 1234
+*/
 function arrayParaInt(array) {
-  return 0
+  let aux = 0
+  aux = array[0]
+  for (let i = 1; i < array.length; i++) {
+    aux = (aux * 10) + array[i]
+  }
+  return aux
 }
 
+/*
+  Implemente uma função que remove valores repetidos do array.
+*/
 function removeRepetidos(array) {
-  return null
+  for (let i = 0; i < array.length; i++) {
+    if (numRepeticao(array, array[i]) > 1) {
+      array.splice(i, 1)
+    }
+  }
+  return array
 }
 
+/*
+  Implemente uma função que soma os valores do array1 e array2 e adiciona um novo array.
+  Ex.: array1 = [10, 5, 30]. array2 = [5, 5, 15]. novo array = [15, 20, 45].
+*/
 function somaArray(array1, array2) {
-  return null
+  let arrayNovo = []
+  for (let i = 0; i < array1.length; i++) {
+    arrayNovo[i] = array1[i] + array2[i];
+  }
+  return arrayNovo
 }
 
 module.exports = {
@@ -189,5 +268,15 @@ module.exports = {
   numRepeticao,
   saoIguais,
   elemComum,
-  estaContido
+  estaContido,
+  swapElem,
+  swapArray,
+  inverte,
+  media,
+  isOrdenado,
+  inserirNoFim,
+  removerComSwap,
+  arrayParaInt,
+  removeRepetidos,
+  somaArray
 }
