@@ -2,35 +2,35 @@
   Implemente uma função que retorna quem é maior, A ou B.
 */
 function maximoAouB(a, b) {
-	return 0
+  return 0
 }
 
 /*
   Retornar true se o valor de A for maior que o de B e C
 */
 function AMaiorQueBeC(a, b, c) {
-	return false
+  return false
 }
 
 /*
   Retornar o maior dos numeros A e B e C dados como entrada.
 */
 function maximoEntreABC(a, b, c) {
-	return 0
+  return 0
 }
 
 /*
   Retornar o maior dos numeros A e B e C e D dados como entrada.
 */
 function maximoEntreABCD(a, b, c, d) {
-	return 0
+  return 0
 }
 
 /*
   Retornar true se A esta entre os numeros B e C.
 */
 function aEstaNoMeio(a, b, c) {
-	return false
+  return false
 }
 
 /*
@@ -46,28 +46,28 @@ function restoDivisao(n1, n2) {
   divisao do maior pelo menor.
 */
 function restoDivisaoMaior(n1, n2) {
-	return 0
+  return 0
 }
 
 /*
   Implemente uma função que recebe um numero e retorne true se ele for par.
 */
 function ehPar(num) {
-	return false
+  return false
 }
 
 /*
   Retorne verdadeiro se o numero passado for multiplo de 3.
 */
 function ehMultiploDe3(num) {
-	return false
+  return false
 }
 
 /*
   Retorne verdadeiro se o numero passado for multiplo do segundo.
 */
 function ehMultiploDoNum2(num1, num2) {
-	return false
+  return false
 }
 
 /*
@@ -75,14 +75,14 @@ function ehMultiploDoNum2(num1, num2) {
   for igual a 1 e tambem num for divisivel por 5.
 */
 function ehSobra31Div5(num) {
-	return false
+  return false
 }
 
 /*
   Retorne verdadeiro se o num por par, mas nao for divisivel por 4 nem por 6.
 */
 function ehParENaodivisivelPor4e6(num) {
-	return false
+  return false
 }
 
 /*
@@ -92,7 +92,7 @@ function ehParENaodivisivelPor4e6(num) {
   se nao satisfazem.
 */
 function satisfazSituacao(n1, n2) {
-	return false
+  return false
 }
 
 /*
@@ -100,7 +100,7 @@ function satisfazSituacao(n1, n2) {
   Se for positivo, retornar o valor positivo.
 */
 function modulo(num) {
-	return num
+  return num
 }
 
 
@@ -109,7 +109,7 @@ function modulo(num) {
   se for negativo retorne o numero subtraido de 3.
 */
 function operacao(num) {
-	return num - 3
+  return num - 3
 }
 
 /*
@@ -133,7 +133,7 @@ function ambos3OuAmbos5(num1, num2) {
   resto da divisao de num3 por num4.
 */
 function restosIguais(num1, num2, num3, num4) {
-	return false
+  return false
 }
 
 /*
@@ -141,7 +141,7 @@ function restosIguais(num1, num2, num3, num4) {
   se for divisível por 3 e por 5 ao mesmo tempo retorne 3.
 */
 function div35(num) {
-	return 0
+  return 0
 }
 
 module.exports = {
