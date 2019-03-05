@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Desafios de programação simples para aprendizado ou prática",
   "scripts": {
-    "test": "mocha 'desafios/**/*.js' --recursive"
+    "test": "mocha 'desafios/**/*.js' --recursive",
+    "test-arrays": "mocha 'desafios/arrays/**/*.js' --recursive",
+    "test-selecao": "mocha 'desafios/selecao/**/*.js' --recursive"
   },
   "author": "Neto Deolino",
   "license": "ISC",
