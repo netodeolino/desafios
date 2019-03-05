@@ -35,15 +35,17 @@ function maximoEntreABC(a, b, c) {
   Retornar o maior dos numeros A e B e C e D dados como entrada.
 */
 function maximoEntreABCD(a, b, c, d) {
-	if (a > b && a > c && a > d) {
-		return a
-  } else if (b > a && b > c && b > d) {
-		return b
-	} else if (c > a && c > b && c > d) {
-		return c
-	} else {
-		return d
-	}
+  let maximo = a
+  if (maximo < b) {
+    maximo = b
+  }
+  if (maximo < c) {
+    maximo = c
+  }
+  if (maximo < d) {
+    maximo = d
+  }
+  return maximo
 }
 
 /*
@@ -60,19 +62,19 @@ function aEstaNoMeio(a, b, c) {
   Dados dois numeros naturais como entrada, determinar o resto da
   divisao do  primeiro pelo segundo quando possível.
 */
-function restoDivisao(n1, n2) {
-  return n1 % n2
+function restoDivisao(a, b) {
+  return a % b
 }
 
 /*
   Dados dois numeros naturais como entrada, determinar o resto da
   divisao do maior pelo menor.
 */
-function restoDivisaoMaior(n1, n2) {
-	if (n1 > n2) {
-		return n1 % n2
+function restoDivisaoMaior(a, b) {
+	if (a > b) {
+		return a % b
 	}
-	return n2 % n1
+	return b % a
 }
 
 /*
@@ -98,7 +100,7 @@ function ehMultiploDe3(num) {
 /*
   Retorne verdadeiro se o numero passado for multiplo do segundo.
 */
-function ehMultiploDoNum2(num1, num2) {
+function num1EhMultiploDonum2(num1, num2) {
 	if (num1 % num2 == 0) {
 		return true
 	}
@@ -171,7 +173,7 @@ function operacao2(num1, num2) {
 	if (resto % 2 == 0) {
     return resto / 2
   }
-  return null
+  return resto
 }
 
 /*
@@ -223,7 +225,7 @@ module.exports = {
   restoDivisaoMaior,
   ehPar,
   ehMultiploDe3,
-  ehMultiploDoNum2,
+  num1EhMultiploDonum2,
   ehSobra31Div5,
   ehParENaodivisivelPor4e6,
   satisfazSituacao,

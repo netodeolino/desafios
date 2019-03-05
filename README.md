@@ -7,4 +7,11 @@ Desafios para prática nos fundamentos/lógica de programação
 
 ### Algoritmos em JavaScript
 
-### Para executar os testes: `npm run test`
+### Execução dos testes:
+  Para executar todos os testes: `npm run test`
+  Para executar os testes de arrays: `npm run test-arrays`
+  Para executar os testes de seleção:  `npm run test-selecao`
+
+#### Próximos desafios a serem implementados
+- Repetição (for, while, etc...)
+- Strings
