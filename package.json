@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha 'desafios/**/*.js' --recursive",
     "test-arrays": "mocha 'desafios/arrays/**/*.js' --recursive",
-    "test-selecao": "mocha 'desafios/selecao/**/*.js' --recursive"
+    "test-selecao": "mocha 'desafios/selecao/**/*.js' --recursive",
+    "test-repeticao": "mocha 'desafios/repeticao/**/*.js' --recursive"
   },
   "author": "Neto Deolino",
   "license": "ISC",
