@@ -13,5 +13,4 @@ Desafios para prática nos fundamentos/lógica de programação
 - Para executar os testes de seleção:  `npm run test-selecao`
 
 #### Próximos desafios a serem implementados
-- Repetição (for, while, etc...)
 - Strings
