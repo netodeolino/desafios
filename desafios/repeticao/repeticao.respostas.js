@@ -108,7 +108,7 @@ function somaPrimos(num) {
 
 
 /*
-  Dado um eiro N como entrada, determinar no conjunto {1 · · · N} a soma
+  Dado um num N como entrada, determinar no conjunto {1 · · · N} a soma
   de todos os não-primos subtraída da soma dos primos.
 */
 function naoPrimosMenosPrimo(num) {
