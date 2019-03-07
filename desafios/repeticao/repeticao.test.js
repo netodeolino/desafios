@@ -16,7 +16,7 @@ const {
   sequencia2,
   sequencia3,
   sequencia4
-} = require('./repeticao.respostas')
+} = require('./repeticao')
 
 describe('soma1Ate10()', () => {
   it('Deve somar de 1 ate 10 [1]', async () => {
