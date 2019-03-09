@@ -13,5 +13,11 @@ Desafios para prática nos fundamentos/lógica de programação
 - Para executar os testes de seleção:  `npm run test-selecao`
 - Para executar os testes de repetição:  `npm run test-repeticao`
 
+#### Exemplo da execução dos testes
+![Exemplo execução](https://github.com/netodeolino/desafios/blob/master/doc/execute?raw=true)
+
+#### Exemplo de uma função que não está passando nos testes
+![Exemplo erros](https://github.com/netodeolino/desafios/blob/master/doc/error?raw=true)
+
 #### Próximos desafios a serem implementados
 - Strings
