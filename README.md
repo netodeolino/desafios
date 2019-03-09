@@ -14,10 +14,14 @@ Desafios para prática nos fundamentos/lógica de programação
 - Para executar os testes de repetição:  `npm run test-repeticao`
 
 #### Exemplo da execução dos testes
-![Exemplo execução](https://github.com/netodeolino/desafios/blob/master/doc/execute.gif?raw=true)
+<p align="center">
+  <img width="800" height="160" src="https://raw.githubusercontent.com/netodeolino/desafios/master/doc/execute.gif">
+</p>
 
 #### Exemplo de uma função que não está passando nos testes
-![Exemplo erros](https://github.com/netodeolino/desafios/blob/master/doc/error.png?raw=true)
+<p align="center">
+  <img width="800" height="340" src="https://raw.githubusercontent.com/netodeolino/desafios/master/doc/error.png">
+</p>
 
 #### Próximos desafios a serem implementados
 - Strings
