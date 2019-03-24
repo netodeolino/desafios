@@ -42,17 +42,13 @@ function verificaEspaco(str) {
   Faça uma função que recebe uma string e retorne o seu tamanho (sem usar o length).
 */
 function tamanhoString(str) {
-  let tam = 0
-  while (str[tam] != '\0') {
-    tam++
-  }
-  return tam
+  return 0
 }
 
 /*
   Faça uma função que recebe duas strings, compare o tamanho da duas e retorne o tamanho da maior string.
 */
-function comparaStrings(str, str2) {
+function comparaStrings(str1, str2) {
   return 0
 }
 
@@ -63,18 +59,10 @@ function stringMaiuscula(str) {
 }
 
 /*
-  Faça uma função que copie até tamanho caracteres da string origem para a string destino.
-  Se tam for 5 e origem for "papagaio", voce só copia "papag".
-  Se tam for 10 e origem for "papag", voce copia a origem toda pro destino.
-  No final você deve retornar quantos caracteres foram copiados.
+  Faça uma função que crie uma nova string a partir de dest até o tam e retorne a mesma.
 */
-function strCopy(dest, origem, tam) {
-  let aux = 0
-  while (origem[aux] != '\0') {
-    dest[aux] = origem[aux]
-    aux++
-  }
-  return aux
+function strCopy(dest, tam) {
+  return ''
 }
 
 /*

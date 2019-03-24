@@ -36,7 +36,7 @@ function tamanhoString(str) {
 /*
   Faça uma função que recebe duas strings, compare o tamanho da duas e retorne o tamanho da maior string.
 */
-function comparaStrings(str, str2) {
+function comparaStrings(str1, str2) {
   return 0
 }
 
@@ -48,13 +48,10 @@ function stringMaiuscula(str) {
 }
 
 /*
-  Faça uma função que copie até tamanho caracteres da string origem para a string destino.
-  Se tam for 5 e origem for "papagaio", voce só copia "papag".
-  Se tam for 10 e origem for "papag", voce copia a origem toda pro destino.
-  No final você deve retornar quantos caracteres foram copiados.
+  Faça uma função que crie uma nova string a partir de dest até o tam e retorne a mesma.
 */
-function strCopy(dest, origem, tam) {
-  return 0
+function strCopy(dest, tam) {
+  return ''
 }
 
 /*
