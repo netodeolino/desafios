@@ -156,3 +156,72 @@ describe('strCopy', () => {
     assert.notEqual(strCopy(str, tam), 'test')
   })
 })
+
+describe('somaCodigoASCII', () => {
+  it('Deve retornar a soma dos caracteres ASCII [1]', async () => {
+    const str = 'casa'
+    assert.equal(somaCodigoASCII(str), 408)
+  })
+
+  it('Deve rretornar a soma dos caracteres ASCII [2]', async () => {
+    const str = 'escola'
+    assert.equal(somaCodigoASCII(str), 631)
+  })
+
+  it('Deve retornar a soma dos caracteres ASCII [3]', async () => {
+    const str = 'escola'
+    assert.notEqual(somaCodigoASCII(str), 632)
+  })
+})
+
+describe('contaCaractere', () => {
+  it('Deve retornar a quantidade de ocorrências de caractere [1]', async () => {
+    const str = 'casa', caratere = 'a'
+    assert.equal(contaCaractere(str, caratere), 2)
+  })
+
+  it('Deve rretornar a quantidade de ocorrências de caractere [2]', async () => {
+    const str = 'test', caratere = 't'
+    assert.equal(contaCaractere(str, caratere), 2)
+  })
+
+  it('Deve retornar a quantidade de ocorrências de caractere [3]', async () => {
+    const str = 'casa', caratere = 'c'
+    assert.notEqual(contaCaractere(str, caratere), 4)
+  })
+})
+
+describe('retiraEspacosDesnecessarios', () => {
+  it('Deve retornar string sem espaços desnecessários [1]', async () => {
+    const str = 'test  de    espacos    '
+    assert.equal(retiraEspacosDesnecessarios(str), 'test de espacos')
+  })
+
+  it('Deve rretornar string sem espaços desnecessários [2]', async () => {
+    const str = '    test remove  espacos    '
+    assert.equal(retiraEspacosDesnecessarios(str), 'test remove espacos')
+  })
+
+  it('Deve retornar string sem espaços desnecessários [3]', async () => {
+    const str = '    test remove  espacos    '
+    assert.notEqual(retiraEspacosDesnecessarios(str), ' test remove espacos ')
+  })
+})
+
+describe('ehPalindroma', () => {
+  it('Deve retornar true se string for palindroma [1]', async () => {
+    const str = 'akasaka'
+    assert.equal(ehPalindroma(str), true)
+  })
+
+  it('Deve rretornar true se string for palindroma [2]', async () => {
+    const str = 'radar'
+    assert.equal(ehPalindroma(str), true)
+  })
+
+  it('Deve retornar true se string for palindroma [3]', async () => {
+    const str = 'rotestor'
+    assert.notEqual(ehPalindroma(str), true)
+  })
+})
+

@@ -66,14 +66,12 @@ function somaCodigoASCII(str) {
   Escreva uma função em que recebe como parâmetro uma cadeia e um caractere, e retorna
   como resultado o número de ocorrências desse caractere na cadeia passada como parâmetro.
 */
-function contaCaractere(s, c) {
+function contaCaractere(str, caractere) {
   return 0
 }
 
 /*
-  Faça uma funçao que recebe duas strings. a primeira, tem palavras separadas
-  por varios espaços em branco. A segunda irá gravar essas palavras separadas
-  por somente um espaço.
+  Faça uma funçao que recebe uma string, retira espaços desnecessários e retorna.
   EXEMPLO
   string 1: LABORATORIO     DE      PROGRAMACAO      I
   depois da função:

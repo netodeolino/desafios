@@ -77,34 +77,19 @@ function somaCodigoASCII(str) {
   Escreva uma função em que recebe como parâmetro uma cadeia e um caractere, e retorna
   como resultado o número de ocorrências desse caractere na cadeia passada como parâmetro.
 */
-function contaCaractere(s, c) {
+function contaCaractere(str, caractere) {
   return 0
 }
 
 /*
-  Faça uma funçao que recebe duas strings. a primeira, tem palavras separadas
-  por varios espaços em branco. A segunda irá gravar essas palavras separadas
-  por somente um espaço.
+  Faça uma funçao que recebe uma string, retira espaços desnecessários e retorna.
   EXEMPLO
   string 1: LABORATORIO     DE      PROGRAMACAO      I
   depois da função:
   string 2: LABORATORIO DE PROGRAMACAO I
 */
-function retiraEspacosDesnecessarios(A, B) {
-  let tam = A.length
-  let z = 0
-  for (let i = 0; i < tam-1; i++) {
-    if (A[i] == ' ' && A[i+1] == ' ') {
-    } else {
-      B[z] = A[i]
-      z++
-    }
-  }
-  if (A[tam] != ' ') {
-    B[z] = A[tam-1]
-    z++
-  }
-  B[z] = '\0'
+function retiraEspacosDesnecessarios(str) {
+  return ''
 }
 
 /*
