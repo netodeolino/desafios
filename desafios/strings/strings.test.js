@@ -19,7 +19,7 @@ const {
   substringPos,
   numSubstring,
   ehAnagrama
-} = require('./strings.respostas')
+} = require('./strings')
 
 describe('verifica', () => {
   it('Deve verificar se as strings são iguais [1]', async () => {
