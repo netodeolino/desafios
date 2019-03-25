@@ -102,23 +102,23 @@ function ehPalindroma(str) {
   LABORATORIO
   NIBESIPESAE
 */
-function tenisPolar(nome) {
+function tenisPolar(str) {
   return ''
 }
 
 /*
-  Faça uma funçao que recebe uma string e modifica ela própria. A string deve ser
+  Faça uma funçao que retorna uma nova string modificada. A string deve ser
   criptografada, trocando as consoantes por # e invertendo a string.
   EXEMPLO:
   string entrada: sua casa
   depois da função: a#a# au#
 */
-function criptografar(nome) {
+function criptografar(str) {
   return ''
 }
 
 /*
-  Retorne a a string menor esta no comeco da string maior
+  Retorne se a string menor esta no comeco da string maior
   Exemplo:
   menor = "pavao"
   maior = "pavao eh lindo"

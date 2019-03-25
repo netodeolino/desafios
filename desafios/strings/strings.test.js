@@ -225,3 +225,104 @@ describe('ehPalindroma', () => {
   })
 })
 
+describe('tenisPolar', () => {
+  it('Deve retornar a string após o TENIS POLAR [1]', async () => {
+    const str = 'AMBULANCIA'
+    assert.equal(tenisPolar(str), 'IMBUNILCAI')
+  })
+
+  it('Deve retornar a string após o TENIS POLAR [2]', async () => {
+    const str = 'TENIS'
+    assert.equal(tenisPolar(str), 'POLAR')
+  })
+
+  it('Deve retornar a string após o TENIS POLAR [3]', async () => {
+    const str = 'LABORATORIO'
+    assert.equal(tenisPolar(str), 'NIBESIPESAE')
+  })
+})
+
+describe('criptografar', () => {
+  it('Deve retornar string criptografada pelas consoantes [1]', async () => {
+    const str = 'casa nova'
+    assert.equal(criptografar(str), 'a#o# a#a#')
+  })
+
+  it('Deve retornar string criptografada pelas consoantes [2]', async () => {
+    const str = 'cidade'
+    assert.equal(criptografar(str), 'e#a#i#')
+  })
+
+  it('Deve retornar string criptografada pelas consoantes [3]', async () => {
+    const str = 'cidade'
+    assert.notEqual(criptografar(str), '#d#d#c')
+  })
+})
+
+describe('estaNoComeco', () => {
+  it('Deve retornar true se string menor está no começo [1]', async () => {
+    const menor = 'paralelo', maior = 'universo paralelo'
+    assert.equal(estaNoComeco(menor, maior), false)
+  })
+
+  it('Deve retornar true se string menor está no começo [2]', async () => {
+    const menor = 'terra', maior = 'terra nossa?'
+    assert.equal(estaNoComeco(menor, maior), true)
+  })
+
+  it('Deve retornar true se string menor está no começo [3]', async () => {
+    const menor = 'cidade', maior = 'cidade azul'
+    assert.notEqual(estaNoComeco(menor, maior), false)
+  })
+})
+
+describe('substringPos', () => {
+  it('Deve retornar true se string menor está em pos [1]', async () => {
+    const menor = 'vao', maior = 'pavao carvao', pos = 2
+    assert.equal(substringPos(menor, maior, pos), true)
+  })
+
+  it('Deve retornar true se string menor está em pos [2]', async () => {
+    const menor = 'vao', maior = 'pavao carvao', pos = 9
+    assert.equal(substringPos(menor, maior, pos), true)
+  })
+
+  it('Deve retornar true se string menor está em pos [3]', async () => {
+    const menor = 'vao', maior = 'pavao carvao', pos = 3
+    assert.notEqual(substringPos(menor, maior, pos), true)
+  })
+})
+
+describe('numSubstring', () => {
+  it('Deve retornar quantidade de ocorrências do menor em maior [1]', async () => {
+    const menor = 'MAE', maior = 'MAEDE DEMAE DEMAE'
+    assert.equal(numSubstring(menor, maior), 3)
+  })
+
+  it('Deve retornar quantidade de ocorrências do menor em maior [2]', async () => {
+    const menor = 'RAD', maior = 'RADA DARAD RAAD'
+    assert.equal(numSubstring(menor, maior), 2)
+  })
+
+  it('Deve retornar quantidade de ocorrências do menor em maior [3]', async () => {
+    const menor = 'RAD', maior = 'RADA DARAD RAAD'
+    assert.notEqual(numSubstring(menor, maior), 3)
+  })
+})
+
+describe('ehAnagrama', () => {
+  it('Deve retornar true se A e B forem anagramas [1]', async () => {
+    const A = 'RODA', B = 'DOAR'
+    assert.equal(ehAnagrama(A, B), true)
+  })
+
+  it('Deve retornar true se A e B forem anagramas [2]', async () => {
+    const A = 'AMOR', B = 'ROMA'
+    assert.equal(ehAnagrama(A, B), true)
+  })
+
+  it('Deve retornar true se A e B forem anagramas [3]', async () => {
+    const A = 'RAD', B = 'DRA'
+    assert.notEqual(ehAnagrama(A, B), true)
+  })
+})

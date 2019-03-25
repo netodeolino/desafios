@@ -12,6 +12,7 @@ Desafios para prática nos fundamentos/lógica de programação
 - Para executar os testes de arrays: `npm run test-arrays`
 - Para executar os testes de seleção:  `npm run test-selecao`
 - Para executar os testes de repetição:  `npm run test-repeticao`
+- Para executar os testes de strings:  `npm run test-strings`
 
 #### Exemplo da execução dos testes
 <p align="center">
@@ -23,5 +24,4 @@ Desafios para prática nos fundamentos/lógica de programação
   <img width="800" height="340" src="https://raw.githubusercontent.com/netodeolino/desafios/master/doc/error.png">
 </p>
 
-#### Próximos desafios a serem implementados
-- Strings
+#### Mandem sugestões de novos desafios :)
